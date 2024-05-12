@@ -2,7 +2,70 @@
     folha de estilo do site one page RK TATOOER
     @autor Felipe Ferreira de Sousa
 */
-
-body{
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+/* CSS Reset*/
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
+
+body {
+    font-family: "Cinzel", serif;   
+    font-style: normal;
+    font-size: 2em;
+}
+/*Layout*/
+.Container {
+    margin: 0 auto;
+    background-color: #ffff;
+}
+
+/* Smartphone Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Smartphone Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 576px){
+    body{
+        background-color: #00f;
+    }
+    /*Layout*/
+    .Container {
+        max-width: 540px;
+    }
+}
+
+/* Tablet Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px){
+    body{
+        background-color: rgb(255, 0, 166);
+    }
+    /*Layout*/
+    .Container {
+        max-width: 720px;
+    }
+}
+
+/* Tablet Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 992px){
+    body{
+        background-color: rgba(255, 255, 0, 0.914);
+    }
+    /*Layout*/
+    .Container {
+        max-width: 960px;
+    }
+}
+
+/* PC  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 1200px){
+    body{
+        background-color: #000;
+    }
+    /*Layout*/
+    .Container {
+        max-width: 1140px;
+    }
+}
+
