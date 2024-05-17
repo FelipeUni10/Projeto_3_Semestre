@@ -13,18 +13,28 @@
 body {
     font-family: "Cinzel", serif;   
     font-style: normal;
-    font-size: 2em;
+    font-size: 1em;
 }
 /*Layout*/
 .Container {
-    margin: 0 auto;
-    background-color: #dcdcdc;
+    margin: 0 auto;    
 }
 
 .Flex {
     display: flex;
     justify-content: space-between;
     background-color: #a9a9a9;
+}
+
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
 }
 
 /* topo do site */
@@ -42,8 +52,9 @@ header {
 }
 
 #logo img {
-    width: 12%;
-    height: 60%;    
+    width: 25%;
+    height: 65%;
+    margin: 10px 10px;    
 }
 
 #check {
@@ -79,46 +90,89 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
+
+/* Destaque */
+main {
+    height: 75vh;
+    background: url(img/tatuador.jpeg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
+}
+
 /* Smartphone Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px){
-    body{
-        background-color: #00f;
-    }
+    
     /*Layout*/
     .Container {
         max-width: 540px;
     }
+
+    /* Destaque */
+    main h1, main h2 {
+        text-shadow: #000 0.25em 0.25em 0.25em;
+    }
+}
+#logo img {
+    width: 35%;
+    height: 75%;
+    margin: 10px 10px;    
 }
 
 /* Tablet Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px){
-    body{
-        
-    }
+   
     /*Layout*/
     .Container {
         max-width: 720px;
+    }
+
+    /* Destaque */
+    main {
+        height: 90vh;
+    }
+
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 2em;
     }
 }
 
 /* Tablet Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (min-width: 992px){
-    body{
-        background-color: rgba(255, 255, 0, 0.914);
-    }
+    
     /*Layout*/
     .Container {
         max-width: 960px;
     }
+
+    /* Destaque */
+    main {
+        height: 70vh;
+    }
+   
 }
 
 /* PC  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (min-width: 1200px){
-    body{
-        background-color: #000;
-    }
+   
     /*Layout*/
     .Container {
         max-width: 1140px;
@@ -158,5 +212,6 @@ nav ul li a {
     nav ul li a:hover {
         color: blue;
     }
+   
 }
 
