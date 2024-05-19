@@ -25,6 +25,23 @@ body {
     justify-content: space-between;
     background-color: #a9a9a9;
 }
+/*.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.TopicoSObre {
+    Margin-top: 20px;
+}
+
+.TopicosSobre img {
+    esse item e para alinhar alguns simbolos caso precise*/
+
+.Flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
 .Botao {
     text-decoration: none;
@@ -42,6 +59,24 @@ body {
     position: fixed;
     right: 10px;
     bottom: 10px;
+}
+
+/*Princ Tattoo*/
+.tatuagens {
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+}
+
+.Card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+    margin-top: 15px;
 }
 
 /* Smartphone Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -63,7 +98,9 @@ header {
 
 label {
     font-size: 3em;
-    padding-right: 15px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
 }
 
 nav ul {
@@ -96,6 +133,7 @@ main {
     height: 75vh;
     background: url(img/tatuador.jpeg);
     background-size: cover;
+    background-position: center;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -111,6 +149,48 @@ main h2 {
     font-size: 1em;
     margin: 20px 0px 50px 0px;
 }
+/* Sobre */
+#sobre {
+    padding: 50px 0px;
+    background: url(img/braca_completo.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*#destaqueSobre {
+    display: none;
+}*/
+
+#textoSobre {
+    color: #fff;
+    padding: 0px 10px;
+}
+
+#textoSobre h2 {
+    margin-bottom: 10px;
+}
+
+/* Conteúdo */
+#conteudo {
+    padding: 50px 0px;
+}
+
+#conteudo h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#todos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#todos a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25em;
+}
 
 /* Smartphone Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px){
@@ -125,11 +205,11 @@ main h2 {
         text-shadow: #000 0.25em 0.25em 0.25em;
     }
 }
-#logo img {
+/*#logo img {
     width: 35%;
     height: 75%;
     margin: 10px 10px;    
-}
+} ver esses dados como esta no codigo do prof antes ou depois das chaves*/
 
 /* Tablet Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px){
@@ -175,7 +255,7 @@ main h2 {
    
     /*Layout*/
     .Container {
-        max-width: 1140px;
+        max-width: 1550px;
     }
     /* Cabeçalho*/
     header {
@@ -183,7 +263,7 @@ main h2 {
     }
 
     #logo img {
-        width: 189px;
+        width: 150px;
         height: 189px;
         margin-top: 30px;
         margin-left: 30px;
@@ -197,7 +277,6 @@ main h2 {
         position: static;
         height: auto;
         background-color: transparent;
-
     }
 
     nav ul li {
@@ -211,6 +290,24 @@ main h2 {
 
     nav ul li a:hover {
         color: blue;
+    }
+
+    /*Sobre */
+    #sobre {
+        background-attachment: fixed;
+    }
+    #destaqueSobre {
+        display: inline;
+    }
+
+    #destaquesobre img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+    
+    main {
+        width: 1550px;
+        height: 800px;
     }
    
 }
