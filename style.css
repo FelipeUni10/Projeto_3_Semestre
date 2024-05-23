@@ -40,7 +40,7 @@ body {
 .Flex4 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .Botao {
@@ -61,11 +61,11 @@ body {
     bottom: 10px;
 }
 
-/*Princ Tattoo*/
-.tatuagens {
+/* Conteúdo Principais Tattoo*/
+.Card {
     margin-top: 25px;
-    width: 338px;
-    height: 520px;
+    width: 5px;
+    height: 5px;
     background-color: #e8e8e8e8;
     border: 1px solid #a1a1a1;
     border-radius: 25px;
@@ -77,6 +77,16 @@ body {
 
 .Card h3 {
     margin-top: 15px;
+}
+
+.Card p {
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+
+.Card a {
+    padding: 10px 100px;
+    border: 0;
 }
 
 /* Smartphone Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -138,7 +148,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: center;   
 }
 
 main h1 {
@@ -151,7 +161,7 @@ main h2 {
 }
 /* Sobre */
 #sobre {
-    padding: 50px 0px;
+    padding: 20% 0px;
     background: url(img/braca_completo.jpeg);
     background-size: cover;
     background-position: center;
@@ -180,7 +190,7 @@ main h2 {
     text-align: center;
 }
 
-#todos {
+/*#todos {
     margin-top: 50px;
     text-align: center;
 }
@@ -190,7 +200,7 @@ main h2 {
     color: #000;
     font-weight: 700;
     font-size: 1.25em;
-}
+} no meu código não tem todos */ 
 
 /* Smartphone Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px){
@@ -221,7 +231,7 @@ main h2 {
 
     /* Destaque */
     main {
-        height: 90vh;
+        height: 100vh;
     }
 
     main h1 {
@@ -260,6 +270,8 @@ main h2 {
     /* Cabeçalho*/
     header {
         height: 120px;
+        width:auto;
+        background-color: #000;
     }
 
     #logo img {
@@ -305,10 +317,13 @@ main h2 {
         margin-right: 50px;
     }
     
-    main {
-        width: 1550px;
-        height: 800px;
+    .main img {
+        height: 100%;
+        
     }
+    
+    
+    
    
 }
 
