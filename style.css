@@ -3,28 +3,35 @@
     @autor Felipe Ferreira de Sousa
 */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
 /* CSS Reset*/
-*{
+* {
     margin: 0;
     border: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Cinzel", serif;   
+    font-family: "Cinzel", serif;
     font-style: normal;
     font-size: 1em;
 }
+
 /*Layout*/
 .Container {
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .Flex {
     display: flex;
     justify-content: space-between;
-    background-color: #a9a9a9;
+    background-color: #000;
 }
+
 /*.Flex2 {
     display: flex;
     align-items: center;
@@ -41,6 +48,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-size: contain;
+}
+
+.Flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 .Botao {
@@ -65,7 +85,7 @@ body {
 .Card {
     margin-top: 25px;
     width: 5px;
-    height: 5px;
+    height: 5px;    
     background-color: #e8e8e8e8;
     border: 1px solid #a1a1a1;
     border-radius: 25px;
@@ -99,7 +119,7 @@ header {
 #logo img {
     width: 25%;
     height: 65%;
-    margin: 10px 10px;    
+    margin: 10px 10px;
 }
 
 #check {
@@ -115,22 +135,23 @@ label {
 
 nav ul {
     list-style: none;
-    background-color: #343538;
+    background-color: rgba(52, 53, 56, 0.95);
     height: 100vh;
     position: fixed;
     top: 60px;
-    right: -100%;
-    width: 100%;
+    right: -65%;
+    width: 65%;
     transition: all 0.5s;
 }
 
-#check:checked ~ ul {
+#check:checked~ul {
     right: 0;
 }
 
 nav ul li {
     padding: 20px;
     border-bottom: 1px solid #a9a9a9;
+    text-align: right;
 }
 
 nav ul li a {
@@ -148,7 +169,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;   
+    text-align: center;
 }
 
 main h1 {
@@ -159,10 +180,11 @@ main h2 {
     font-size: 1em;
     margin: 20px 0px 50px 0px;
 }
+
 /* Sobre */
 #sobre {
     padding: 20% 0px;
-    background: url(img/braca_completo.jpeg);
+    background: url(img/coruja.png);
     background-size: cover;
     background-position: center;
 }
@@ -200,30 +222,80 @@ main h2 {
     color: #000;
     font-weight: 700;
     font-size: 1.25em;
-} no meu código não tem todos */ 
+} no meu código não tem todos */
+
+/* rodapé */
+address {
+    padding: 35px 0px;
+    background: url(img/tatuador_tatuado.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address img {
+    padding-top: 15px;
+}
+
+#iconeLocal {
+    display: none;
+}
+
+#googleMaps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background-color: #343538;
+    color: #fff;
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
 
 /* Smartphone Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 576px){
-    
+@media (min-width: 576px) {
+
     /*Layout*/
     .Container {
         max-width: 540px;
     }
 
     /* Destaque */
-    main h1, main h2 {
+    main h1,
+    main h2 {
         text-shadow: #000 0.25em 0.25em 0.25em;
     }
+
+    /* rodapeé */
+    .Flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social {
+        margin: 0;
+    }
 }
-/*#logo img {
-    width: 35%;
+
+#logo img {
+    width: 15%;
     height: 75%;
-    margin: 10px 10px;    
-} ver esses dados como esta no codigo do prof antes ou depois das chaves*/
+    margin: 10px 10px;
+}
 
 /* Tablet Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 768px){
-   
+@media (min-width: 768px) {
+
     /*Layout*/
     .Container {
         max-width: 720px;
@@ -245,8 +317,8 @@ main h2 {
 
 /* Tablet Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-@media (min-width: 992px){
-    
+@media (min-width: 992px) {
+
     /*Layout*/
     .Container {
         max-width: 960px;
@@ -256,21 +328,22 @@ main h2 {
     main {
         height: 70vh;
     }
-   
+
 }
 
 /* PC  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-@media (min-width: 1200px){
-   
+@media (min-width: 1200px) {
+
     /*Layout*/
     .Container {
         max-width: 1550px;
     }
+
     /* Cabeçalho*/
     header {
         height: 120px;
-        width:auto;
+        width: auto;
         background-color: #000;
     }
 
@@ -282,11 +355,12 @@ main h2 {
     }
 
     label {
-        display:none;
+        display: none;
     }
 
     nav ul {
         position: static;
+        width: 100%;
         height: auto;
         background-color: transparent;
     }
@@ -308,6 +382,7 @@ main h2 {
     #sobre {
         background-attachment: fixed;
     }
+
     #destaqueSobre {
         display: inline;
     }
@@ -316,14 +391,27 @@ main h2 {
         border-radius: 50%;
         margin-right: 50px;
     }
-    
+
     .main img {
         height: 100%;
-        
-    }
-    
-    
-    
-   
-}
 
+    }
+
+    /* Rodapé */
+    #iconeLocal {
+        display: inline;
+    }
+
+    #iconeMapa {
+        display: none;
+    }
+
+    #gooleMaps {
+        display: inline;
+    }
+
+    .Flex6 {
+        flex-direction: row-reverse;
+    }
+
+}
