@@ -20,7 +20,7 @@ body {
     font-weight: 100;
     font-style: normal;
     font-size: 1em;
-    background-color: #fff;
+    background: linear-gradient(72deg, #6f6d6d 1%, #000 99%);
 }
 
 /*Layout*/
@@ -31,26 +31,16 @@ body {
 .Flex {
     display: flex;
     justify-content: space-between;
-    background-color: #000;
+    background: linear-gradient(72deg, #6f6d6d 1%, #000 99%);
 }
 
-/*.Flex2 {
-    display: flex;
-    align-items: center;
-}
-
-.TopicoSObre {
-    Margin-top: 20px;
-}
-
-.TopicosSobre img {
-    esse item e para alinhar alguns simbolos caso precise*/
 
 .Flex4 {
-    display: flex;
+
     flex-wrap: nowrap;
-    justify-content: space-between;
-    background-size: contain;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .Flex5 {
@@ -65,7 +55,9 @@ body {
     align-items: center;
 }
 
-#contato, #endereco, #googleMaps {
+#contato,
+#endereco,
+#googleMaps {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
@@ -90,23 +82,167 @@ body {
 }
 
 /* Conteúdo Principais Tattoo*/
+.slider {
 
-.slideshow-container {
+    width: 100%;
+    max-height: auto;
+}
+
+
+.testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 100px;
     position: relative;
-    max-width: 100%;
-    margin: auto;
+    min-height: 350px;
+    perspective: 1000px;
     overflow: hidden;
 }
 
-/* Hide the images by default */
+.testimonials .item {
+    display: flex;
+    height: auto;
+    width: 300px;
+    border-radius: 5px;
+    top: 0;
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    margin: auto;
+}
+
+.testimonials .item img {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dots {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+
+    display: flex;
+}
+
+.dots label1 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #c08d4a;
+    margin: 7px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.navigation {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+
+    display: flex;
+}
+
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.bar:hover {
+    background-color: #fff;
+}
+
+
+#slide1:checked~.dots label1[for="slide3"],
+#slide2:checked~.dots label1[for="slide4"],
+#slide3:checked~.dots label1[for="slide5"],
+#slide4:checked~.dots label1[for="slide1"],
+#slide5:checked~.dots label1[for="slide2"] {
+    transform: scale(2);
+}
+
+#slide1:checked~.dots label1[for="slide2"],
+#slide2:checked~.dots label1[for="slide1"],
+#slide2:checked~.dots label1[for="slide3"],
+#slide3:checked~.dots label1[for="slide2"],
+#slide3:checked~.dots label1[for="slide4"],
+#slide4:checked~.dots label1[for="slide3"],
+#slide4:checked~.dots label1[for="slide5"],
+#slide5:checked~.dots label1[for="slide4"] {
+    transform: scale(1.5);
+}
+
+#slide1:checked~.testimonials label1[for="slide3"],
+#slide2:checked~.testimonials label1[for="slide4"],
+#slide3:checked~.testimonials label1[for="slide5"],
+#slide4:checked~.testimonials label1[for="slide1"],
+#slide5:checked~.testimonials label1[for="slide2"] {
+    transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+    z-index: 2;
+}
+
+#slide1:checked~.testimonials label1[for="slide2"],
+#slide2:checked~.testimonials label1[for="slide3"],
+#slide3:checked~.testimonials label1[for="slide4"],
+#slide4:checked~.testimonials label1[for="slide5"],
+#slide5:checked~.testimonials label1[for="slide1"] {
+    transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+    z-index: 3;
+}
+
+#slide2:checked~.testimonials label1[for="slide1"],
+#slide3:checked~.testimonials label1[for="slide2"],
+#slide4:checked~.testimonials label1[for="slide3"],
+#slide5:checked~.testimonials label1[for="slide4"],
+#slide1:checked~.testimonials label1[for="slide5"] {
+    transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+    z-index: 3;
+}
+
+#slide3:checked~.testimonials label1[for="slide1"],
+#slide4:checked~.testimonials label1[for="slide2"],
+#slide5:checked~.testimonials label1[for="slide3"],
+#slide2:checked~.testimonials label1[for="slide5"],
+#slide1:checked~.testimonials label1[for="slide4"] {
+    transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+
+}
+
+#slide1:checked~.testimonials label1[for="slide1"],
+#slide2:checked~.testimonials label1[for="slide2"],
+#slide3:checked~.testimonials label1[for="slide3"],
+#slide4:checked~.testimonials label1[for="slide4"],
+#slide5:checked~.testimonials label1[for="slide4"],
+#slide5:checked~.testimonials label1[for="slide5"] {
+
+    z-index: 4;
+}
+
 
 .Card {
     margin-top: 25px;
-    width: 5px;
-    height: 5px;    
+    width: 338px;
+    height: 520px;
     background-color: #e8e8e8e8;
     border: 1px solid #a1a1a1;
     border-radius: 25px;
+    text-align: center;
 }
 
 .Card img {
@@ -118,7 +254,8 @@ body {
 }
 
 .Card p {
-    color: #434343;
+    text-align: left;
+    color: #dc0303;
     padding: 10px 30px 50px 30px;
 }
 
@@ -153,7 +290,7 @@ label {
 
 nav ul {
     list-style: none;
-    background-color: rgba(52, 53, 56, 0.95);
+    background-color: rgba(230, 232, 238, 0.95);
     height: 100vh;
     position: fixed;
     top: 60px;
@@ -191,14 +328,15 @@ main {
 }
 
 main h1 {
-    font-size: 1em;
-    text-shadow: #000 0.2em 0.2em 0.05em;
+    font-size: 2.5em;
+    text-shadow: #000000 0.2em 0.2em 0.02em;
 }
 
 main h2 {
-    font-size: 3em;
+    font-size: 1.25em;
     margin: 20px 0px 50px 0px;
-    text-shadow: #000 0.2em 0.2em 0.05em;
+    text-shadow: #000000 0.2em 0.2em 0.02em;
+
 }
 
 /* Sobre */
@@ -207,7 +345,7 @@ main h2 {
     background: url(img/coruja.png);
     background-size: cover;
     background-position: center;
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: justify;
 }
 
@@ -221,7 +359,7 @@ main h2 {
 }
 
 #textoSobre h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Conteúdo */
@@ -235,17 +373,7 @@ main h2 {
     margin-top: 100px;
 }
 
-/*#todos {
-    margin-top: 50px;
-    text-align: center;
-}
 
-#todos a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    font-size: 1.25em;
-} no meu código não tem todos */
 
 /* rodapé */
 address {
@@ -271,14 +399,15 @@ address img {
 
 #googleMaps {
     width: 100%;
-    height: 450px; /* Você pode ajustar a altura conforme necessário */
-    padding: 20px 0;
+    height: 450px;
+    /* Você pode ajustar a altura conforme necessário */
+    padding: 10px 0px;
     align-items: center;
 }
 
 footer {
     padding: 50px;
-    background-color: #343538;
+    background: linear-gradient(72deg, #6f6d6d 1%, #000 99%);
     color: #fff;
     text-align: center;
 }
@@ -296,9 +425,12 @@ footer {
     }
 
     /* Destaque */
-    main h1,
+    main h1 {
+        font-size: 100%;
+    }
 
     main h2 {
+        font-size: 0.5em;
         text-shadow: #525252 0.25em 0.25em 0.25em;
     }
 
@@ -314,12 +446,12 @@ footer {
     }
 
 
-#logo img {
-    width: 15%;
-    height: 75%;
-    margin: 10px 10px;
+    #logo img {
+        width: 15%;
+        height: 75%;
+        margin: 10px 10px;
     }
-}   
+}
 
 /* Tablet Portrait  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
@@ -335,35 +467,35 @@ footer {
     }
 
     main h1 {
-        font-size: 5.5em;
+        font-size: 5.8em;
     }
 
     main h2 {
-        font-size: 2em;
+        font-size: 2.3em;
     }
 
     .Flex6 {
         flex-direction: row-reverse;
     }
-    
+
     address {
         padding-top: 50px;
-      }
-    
-      #iconeLocal {
+    }
+
+    #iconeLocal {
         display: inline;
-      }
-    
-      #iconeMapa {
+    }
+
+    #iconeMapa {
         display: none;
-      }
-    
-      #googleMaps {
+    }
+
+    #googleMaps {
         display: inline;
         right: 100%;
         height: 100%;
-    }  
-   
+    }
+
 }
 
 /* Tablet Landscape  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -380,6 +512,12 @@ footer {
         height: 70vh;
     }
 
+    /*slider */
+
+    .testimonials .item {
+        width: 600px;
+    }
+
 }
 
 /* PC  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -394,8 +532,8 @@ footer {
     /* Cabeçalho*/
     header {
         height: 110px;
-        width: auto;
-        background-color: #000;
+        max-width: auto;
+        background: linear-gradient(72deg, #6f6d6d 1%, #000 99%);
     }
 
     #logo img {
@@ -422,7 +560,7 @@ footer {
     }
 
     nav ul li {
-        color: #343538;
+        color: #e5e7ee;
     }
 
     nav ul li a:hover {
@@ -446,5 +584,5 @@ footer {
     .main img {
         height: 100%;
         background-color: #a1a1a1;
-    }    
+    }
 }
